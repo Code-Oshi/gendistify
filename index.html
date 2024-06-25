@@ -1,0 +1,115 @@
+<!-- Gendistify -->
+<!-- Made by @indigo_la_n  -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gendistify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/djm2tvs.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Song List -->
+        <div class="song-list" onclick="openNav()">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <p>Song List</p>
+        </div>
+        <!-- Song List Nav -->
+        <div id="song-nav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                <div class="song-list-close">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <p>Song List</p>
+                </div>
+            </a>
+            <div class="song-names" id="first-song" onclick="playTrack(1)"></div>
+            <div class="song-names" id="second-song" onclick="playTrack(2)"></div>
+            <div class="song-names" id="third-song" onclick="playTrack(3)"></div>
+            <div class="song-names" id="fourth-song" onclick="playTrack(4)"></div>
+            <div class="song-names" id="fifth-song" onclick="playTrack(5)"></div>
+            <a href="javascript:void(0)" class="nextbtn" onclick="nextList()">
+                <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- Upper Part -->
+        <div class="layout">
+            <div class="col_layout">
+                <!-- Cover Video -->
+                 <div id="cover_video" class="cover">
+                 </div>
+                <!--- Song Title & Artist Name --->
+                <div class="title">
+                    <p class="now_playing">Now Playing: </p>
+                    <p class="title-title"></p>
+                    <p> - </p>
+                    <p class="title-artist"></p>
+                </div>
+                <!--- Video Embedded GIF --->
+                <div style="display: none;" id="embedder">
+                </div>
+                <!--- Song Title & Artist Name Mobile --->
+                <div class="title-mobile">
+                    <p class="title-title"></p>
+                    <p class="title-artist"></p>
+                </div>
+                <!--- Song Duration --->
+                <div class="duration">
+                    <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="changeDuration()">
+                </div>
+                <div class="text-duration">
+                    <p class="duration_show" id="show_duration">00:00/00:00</p>
+                </div>
+                <!--- Multimedia Tools --->
+                <div class="middle">
+                    <div class="prev-titles" onclick="previousSong()">
+                        <p class="prev-artist"></p>
+                        <p class="prev-title"></p>
+                    </div>
+                    <button onclick="previousSong()" id="pre"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+                    <button onclick="skipBackward()" id="backward"><i class="fa fa-backward aria-hidden=" true"></i></button>
+                    <button onclick="justPlay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                    <button onclick="stopSong()" id="play"><i class="fa fa fa-stop" aria-hidden="true"></i></button>
+                    <button onclick="skipForward()" id="forward"><i class="fa fa-forward aria-hidden=" true"></i></button>
+                    <button onclick="nextSong()" id="next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <div class="next-titles" onclick="nextSong()">
+                        <p class="next-artist"></p>
+                        <p class="next-title"></p>
+                    </div>
+                </div>
+                <!-- Prev & Next Song Info Mobile View -->
+                <div class="middle-mobile">
+                    <div class="prev-titles" onclick="previousSong()">
+                        <p class="prev-artist"></p>
+                        <p class="prev-title"></p>
+                    </div>
+                    <button onclick="previousSong()"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                    <button onclick="nextSong()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                    <div class="next-titles" onclick="nextSong()">
+                        <p class="next-artist"></p>
+                        <p class="next-title"></p>
+                    </div>
+                </div>
+                <!-- Volume Mobile -->
+                <div class="volume-mobile">
+                    <input type="range"" min=" 0" max="100" value="70" onchange="volumeChangeMobile()" id="volume_mobile">
+                    <i class="fa fa-volume-up" aria-hidden="true" onclick="soundSettingsMobile()" id="volume_icon_mobile"></i>
+                    <p id="volume_show_mobile">70</p>
+                </div>
+            </div>
+            <!-- Volume -->
+            <div class="volume">
+                <input type="range" orient="vertical" min="0" max="100" value="70" onchange="volumeChange()" id="volume">
+                <i class="fa fa-volume-up" aria-hidden="true" onclick="soundSettings()" id="volume_icon"></i>
+                <p id="volume_show">70</p>
+            </div>
+        </div>
+    </div>
+    <!--- Add javascript file --->
+    <script src="index.js"></script>
+</body>
+</html>
