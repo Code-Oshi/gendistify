@@ -173,7 +173,7 @@ const songs = [
     title: 'Doubutsuen wa Taihen da (Indonesia ver.)',
     embedUrl: `<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="in" dir="ltr">selamat tidur, besok show aitakatta!! 👍🏻❤️ salam sehat sejahtera dan assalamualaikum wr wb <a href="https://t.co/6SKkFVwaMZ">pic.twitter.com/6SKkFVwaMZ</a></p>&mdash; Gendis Mayrannisa (@Gendis_JKT48) <a href="https://twitter.com/Gendis_JKT48/status/1765748986307383413?ref_src=twsrc%5Etfw">March 7, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`,
     original: 'https://www.tiktok.com/@gendisjkt48/video/7214857121710591258',
-    socialMedia: 'Tiktok',
+    socialMedia: 'X',
   },
 ];
 
