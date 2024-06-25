@@ -139,6 +139,20 @@ body {
     box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
 }
 
+.source {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    background-color: #0F1324;
+    padding: 10px;
+    border-radius: 100px;
+    z-index: 1000;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .cover video {
     width: 100%;
     height: 100%;
@@ -436,6 +450,12 @@ input[type="range"]::-webkit-slider-thumb {
         margin-bottom: 0px;
     }
 
+    .source {
+        font-size: 8px;
+        right: 5px;
+        padding: 5px;
+    }
+
     .container {
         padding-top: 10%;
     }
@@ -523,6 +543,13 @@ input[type="range"]::-webkit-slider-thumb {
         height: 250px;
         margin-bottom: 0px;
     }
+
+    .source {
+        font-size: 6px;
+        right: 5px;
+        top: 5px;
+        padding: 5px;
+    }
 }
 
 @media only screen and (max-width: 280px) {
@@ -530,5 +557,12 @@ input[type="range"]::-webkit-slider-thumb {
         width: 150px;
         height: 150px;
         margin-bottom: 0px;
+    }
+
+    .source {
+        font-size: 4px;
+        right: 3px;
+        top: 3px;
+        padding: 3px;
     }
 }
